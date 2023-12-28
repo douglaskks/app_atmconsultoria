@@ -41,3 +41,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+#Pastas a serem bloqueadas
+linux/
+macos/
+windows/
+web/
+ios/
+android/
