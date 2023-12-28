@@ -23,13 +23,15 @@ class _telaPrincipalState extends State<telaPrincipal> {
         backgroundColor: Colors.black,
       ),
       body: Container(
-        padding: EdgeInsets.all(32),
+        padding: EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset("images/logo.png"),
             Padding(padding: EdgeInsets.only(top: 32)),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 //Botão "A Empresa"
                 GestureDetector(
@@ -49,9 +51,10 @@ class _telaPrincipalState extends State<telaPrincipal> {
                 )
               ],
             ),
+            Padding(padding: EdgeInsets.only(top: 32)),
             //parte de baixo do menu
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 //Botão "Clientes"
                 GestureDetector(
