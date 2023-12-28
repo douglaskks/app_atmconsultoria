@@ -12,6 +12,26 @@ class telaPrincipal extends StatefulWidget {
 }
 
 class _telaPrincipalState extends State<telaPrincipal> {
+  void _abrirempresa() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => telaSecundaria()));
+  }
+
+  void _abrirServicos() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => telaServicos()));
+  }
+
+  void _abrirClientes() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => telaClientes()));
+  }
+
+  void _abrirContato() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => telaContato()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,18 +55,12 @@ class _telaPrincipalState extends State<telaPrincipal> {
               children: <Widget>[
                 //Botão "A Empresa"
                 GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const telaSecundaria())),
+                  onTap: () => _abrirempresa(),
                   child: Image.asset("images/menu_empresa.png"),
                 ),
                 //Botão Serviços
                 GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const telaServicos())),
+                  onTap: () => _abrirServicos(),
                   child: Image.asset("images/menu_servico.png"),
                 )
               ],
@@ -58,18 +72,12 @@ class _telaPrincipalState extends State<telaPrincipal> {
               children: <Widget>[
                 //Botão "Clientes"
                 GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const telaClientes())),
+                  onTap: () => _abrirClientes(),
                   child: Image.asset("images/menu_cliente.png"),
                 ),
                 //Botão Serviços
                 GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const telaContato())),
+                  onTap: () => _abrirContato(),
                   child: Image.asset("images/menu_contato.png"),
                 )
               ],
