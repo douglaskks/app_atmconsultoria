@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class telaSecundaria extends StatefulWidget {
-  const telaSecundaria({super.key});
+  const telaSecundaria({Key? key, required this.valor}) : super(key: key);
+
+  final String valor;
 
   @override
   State<telaSecundaria> createState() => _telaSecundariaState();
@@ -45,7 +47,11 @@ class _telaSecundariaState extends State<telaSecundaria> {
               Text(
                 "Segurança Cibernética: Protegemos seu negócio contra ameaças, garantindo a segurança de seus dados.",
                 textAlign: TextAlign.justify,
-              )
+              ),
+              Text(
+                "Valor passado: ${this.widget.valor}",
+                textAlign: TextAlign.justify,
+              ),
             ],
           ),
         ));

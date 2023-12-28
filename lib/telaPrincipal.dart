@@ -14,7 +14,10 @@ class telaPrincipal extends StatefulWidget {
 class _telaPrincipalState extends State<telaPrincipal> {
   void _abrirempresa() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => telaSecundaria()));
+        context,
+        MaterialPageRoute(
+          builder: (context) => telaSecundaria(valor: "Douglas"),
+        ));
   }
 
   void _abrirServicos() {
